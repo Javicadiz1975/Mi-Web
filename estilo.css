@@ -1,3 +1,4 @@
+/* Tipografía y diseño global */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -42,35 +43,24 @@ nav ul li a:hover {
     color: #f0a500;
 }
 
-/* Secciones */
+/* Diseño de dos columnas */
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
 .section {
-    padding: 40px 20px;
+    flex: 1;
+    padding: 20px;
     background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.section:nth-child(even) {
-    background-color: #f0f0f5;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.section h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #f0a500;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* Footer */
+/* Estilo para el Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -82,8 +72,25 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
+footer #contact {
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
 /* Estilos Responsive */
 @media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -91,9 +98,5 @@ footer {
     nav ul li {
         display: block;
         margin-bottom: 10px;
-    }
-
-    .section {
-        padding: 20px;
     }
 }
